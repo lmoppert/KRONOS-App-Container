@@ -1,6 +1,7 @@
 Django
 django-debug-toolbar
 django-extensions
+django-filer
 django-modeltranslation
 django-tables2
 MySQL-python

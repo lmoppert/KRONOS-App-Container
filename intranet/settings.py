@@ -21,6 +21,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django_extensions',
     'debug_toolbar',
+    'filer',
+    'easy_thumbnails',
     'modeltranslation',
     'south',
     'chemicals',
