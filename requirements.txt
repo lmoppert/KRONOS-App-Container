@@ -3,6 +3,7 @@ django-debug-toolbar
 django-extensions
 django-filer
 django-modeltranslation
+django-sekizai
 django-tables2
 MySQL-python
 South
