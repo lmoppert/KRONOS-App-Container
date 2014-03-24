@@ -1,17 +1,18 @@
 """URL configuration for the intranet django application container."""
 
 from django.conf.urls import include, url, patterns
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.conf import settings
 from chemicals import urls as chemical_urls
 
 admin.autodiscover()
 
-urlpatterns = patterns(
+urlpatterns = i18n_patterns(
     '',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include(chemical_urls)),
+    url(r'', include(chemical_urls)),
 )
 
 if settings.DEBUG:
