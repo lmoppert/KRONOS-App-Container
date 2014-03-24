@@ -11,3 +11,4 @@ syntax: glob
 logs/*.log
 intranet/local_settings.py
 static/*
+media/*
