@@ -63,7 +63,7 @@ LANGUAGES = [
     ('en', _('English')),
     ('de', _('German')),
     ('nl', _('Dutch')),
-    ('nb', _('Norwegian Bokmal')),
+    #('nb', _('Norwegian Bokmal')),
 ]
 TIME_ZONE = 'Europe/Berlin'
 
