@@ -9,7 +9,7 @@ syntax: glob
 *~
 ~$*
 logs/*.log
-she/settings/dbpass.py
+she/settings/secrets.py
 she/apache.conf
 static/*
 media/*

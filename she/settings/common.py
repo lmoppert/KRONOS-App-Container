@@ -3,21 +3,11 @@
 from django.utils.translation import ugettext_lazy as _
 from django.conf import global_settings
 from os.path import abspath, basename, dirname, join, normpath
-from helpers import gen_secret_key
+from secrets import SECRET_KEY
 
 BASE_DIR = dirname(dirname(abspath(__file__)))
 SITE_NAME = basename(BASE_DIR)
 SITE_ROOT = dirname(BASE_DIR)
-
-SECRET_FILE = normpath(join(SITE_ROOT, 'deploy', 'SECRET'))
-try:
-    SECRET_KEY = open(SECRET_FILE).read().strip()
-except IOError:
-    try:
-        with open(SECRET_FILE, 'w') as f:
-            f.write(gen_secret_key(50))
-    except IOError:
-        raise Exception('Cannot open file {} for writing.'.format(SECRET_FILE))
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -53,18 +43,17 @@ ROOT_URLCONF = '{}.urls'.format(SITE_NAME)
 WSGI_APPLICATION = '{}.wsgi.application'.format(SITE_NAME)
 
 INSTALLED_APPS = (
+    'modeltranslation',
     'django.contrib.admin',
+    'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
-    'django.contrib.admindocs',
     'django_extensions',
     'filer',
     'easy_thumbnails',
-    'modeltranslation',
     'sekizai',
     'chemicals',
     'django_tables2',

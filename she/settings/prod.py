@@ -19,7 +19,7 @@ from secrets import DB_PASS
 # )
 #
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
@@ -39,9 +39,3 @@ DATABASES = {
     }
 }
 
-MIDDLEWARE_CLASSES += (
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
-)
-INSTALLED_APPS = ('debug_toolbar', ) + INSTALLED_APPS
-DEBUG_TOOLBAR_PATCH_SETTINGS = False
-INTERNAL_IPS = ('127.0.0.1', '10.49.20.25', '10.49.20.40')
