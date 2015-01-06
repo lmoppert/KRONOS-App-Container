@@ -1,4 +1,4 @@
-"""URL configuration for the intranet django application container."""
+"""URL configuration for the she django application container."""
 
 from django.conf.urls import include, url, patterns
 from django.conf.urls.i18n import i18n_patterns

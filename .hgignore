@@ -9,7 +9,7 @@ syntax: glob
 *~
 ~$*
 logs/*.log
-intranet/local_settings.py
-intranet/apache.conf
+she/settings/dbpass.py
+she/apache.conf
 static/*
 media/*
