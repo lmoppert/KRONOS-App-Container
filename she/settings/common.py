@@ -33,10 +33,10 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-STATIC_ROOT = normpath(join(BASE_DIR, "static"))
+STATIC_ROOT = normpath(join(SITE_ROOT, "static"))
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = normpath(join(BASE_DIR, "media"))
+MEDIA_ROOT = normpath(join(SITE_ROOT, "media"))
 MEDIA_URL = '/media/'
 
 ROOT_URLCONF = '{}.urls'.format(SITE_NAME)
@@ -81,3 +81,7 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters',
 )
+
+MIGRATION_MODULES = {
+    'filer': 'filer.migrations_django',
+}
