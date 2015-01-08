@@ -4,10 +4,12 @@ from django.utils.translation import ugettext_lazy as _
 from django.conf import global_settings
 from os.path import abspath, basename, dirname, join, normpath
 from secrets import SECRET_KEY
+import sys
 
 BASE_DIR = dirname(dirname(abspath(__file__)))
 SITE_NAME = basename(BASE_DIR)
 SITE_ROOT = dirname(BASE_DIR)
+sys.path.append(BASE_DIR)
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -28,6 +30,7 @@ LANGUAGES = [
 ]
 
 SITE_ID = 1
+SECRET_KEY = SECRET_KEY
 
 USE_I18N = True
 USE_L10N = True
@@ -43,6 +46,7 @@ ROOT_URLCONF = '{}.urls'.format(SITE_NAME)
 WSGI_APPLICATION = '{}.wsgi.application'.format(SITE_NAME)
 
 INSTALLED_APPS = (
+    'suit',
     'modeltranslation',
     'django.contrib.admin',
     'django.contrib.admindocs',

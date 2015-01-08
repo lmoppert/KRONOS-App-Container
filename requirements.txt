@@ -6,3 +6,4 @@ django-modeltranslation
 django-sekizai
 django-tables2
 MySQL-python
+docutils
