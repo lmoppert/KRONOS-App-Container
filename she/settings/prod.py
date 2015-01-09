@@ -22,6 +22,8 @@ from secrets import DB_PASS
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+ALLOWED_HOSTS = ['.eu.nli.net', '.kronosww.com', ]
+
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 DATABASES = {
@@ -38,4 +40,3 @@ DATABASES = {
         'PASSWORD': DB_PASS,
     }
 }
-

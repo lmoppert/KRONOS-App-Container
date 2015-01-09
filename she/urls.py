@@ -7,8 +7,6 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from chemicals import urls as chemical_urls
 
-admin.autodiscover()
-
 urlpatterns = i18n_patterns(
     '',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
