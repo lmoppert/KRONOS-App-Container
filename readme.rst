@@ -15,7 +15,7 @@ Installation
 To avoid conflicts, this project should be installed into a virtualenv. Just
 clone the repository and the contained sub-repos with the following command:
 
-``clone https://lmoppert@bitbucket.org/LEV_AppDev/app-container she``
+``hg clone https://lmoppert@bitbucket.org/LEV_AppDev/app-container she``
 
 There are some prerequisites you have to provide before you can install the
 necessary python packages:
@@ -26,17 +26,23 @@ necessary python packages:
   ``mysql-common, mysql-server, libmysqlclient-dev``
 * In order to build some packages, the python development files should be
   isntalled, Debian/Ubuntu:
-
+  
   ``python-dev``
-
 The actual installation is the done with 
 
 ``pip install -r requirements.txt``
 
-Currently the requirement definition of the ``django-filer`` package is broken
-so the dependencies are explicitly mentioned in the ``requirements.txt`` file
+Currently the requirement definition of the *django-filer* package is broken
+so the dependencies are explicitly mentioned in the *requirements.txt* file
 and you can install it manually after the above installation has finished:
+
 ``pip install django-filer --no-deps``
+
+You have to create a database for the project named *she* and a user also named *she* that has füll rights on that database. The password should go into a new file called secret.py
+along with the Secret Key for this instance of the application::
+
+  DB_PASS = 'Secret_DB_Password'
+  SECRET_KEY = 'Secret_Key_50_random_ASCII_Characters'
 
 
 .. _Django: https://www.djangoproject.com/
