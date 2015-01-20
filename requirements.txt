@@ -1,11 +1,15 @@
+# Basic Needs
 Django
-django-debug-toolbar
-django-extensions
 django-filer
 django-modeltranslation
 django-sekizai
 django-tables2
+django-suit
 MySQL-python
 docutils
+
+# Development Tools
+django-debug-toolbar
+django-extensions
 pyinotify
 Werkzeug
