@@ -1,6 +1,4 @@
-# Basic Needs
 Django
-django-filer
 django-modeltranslation
 django-sekizai
 django-tables2
@@ -8,8 +6,11 @@ django-suit
 MySQL-python
 docutils
 
-# Development Tools
-django-debug-toolbar
-django-extensions
-pyinotify
-Werkzeug
+# The following package is currently broken due to a syntax change in newer pip
+# versions. All dependencies are explicitely mentioned afterwards so this has
+# to be installed manually with the "--no-deps" option
+#django-filer
+django-mptt
+easy_thumbnails
+django-polymorphic
+Pillow
