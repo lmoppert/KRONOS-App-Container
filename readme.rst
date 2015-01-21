@@ -28,6 +28,10 @@ necessary python packages:
   isntalled, Debian/Ubuntu:
   
   ``python-dev``
+* For the translations the gettext tools must be available:
+
+  ``gettext,  libgettextpo-dev, gettext-doc``
+
 The actual installation is the done with 
 
 ``pip install -r requirements.txt``
