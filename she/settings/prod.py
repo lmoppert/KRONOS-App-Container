@@ -24,7 +24,7 @@ TEMPLATE_DEBUG = DEBUG
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static"))
 STATIC_URL = 'https://lev-srv-590.eu.nli.net/'
-MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
+MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "media"))
 MEDIA_URL = 'https://lev-srv-590.eu.nli.net/media/'
 
 ALLOWED_HOSTS = [

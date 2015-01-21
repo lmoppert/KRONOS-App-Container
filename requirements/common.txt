@@ -5,12 +5,4 @@ django-tables2
 django-suit
 MySQL-python
 docutils
-
-# The following package is currently broken due to a syntax change in newer pip
-# versions. All dependencies are explicitely mentioned afterwards so this has
-# to be installed manually with the "--no-deps" option
-#django-filer
-django-mptt
-easy_thumbnails
-django-polymorphic
-Pillow
+django-filer
