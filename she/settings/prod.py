@@ -22,7 +22,15 @@ from secrets import DB_PASS
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['.eu.nli.net', '.kronosww.com', ]
+STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static"))
+STATIC_URL = 'https://lev-srv-590.eu.nli.net/'
+MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
+MEDIA_URL = 'https://lev-srv-590.eu.nli.net/media/'
+
+ALLOWED_HOSTS = [
+    '.eu.nli.net', '.eu.nli.net.',
+    '.kronosww.com', '.kronosww.com.',
+]
 
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 

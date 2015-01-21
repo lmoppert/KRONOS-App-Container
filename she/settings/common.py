@@ -39,7 +39,7 @@ USE_TZ = True
 STATIC_ROOT = normpath(join(SITE_ROOT, "static"))
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = normpath(join(SITE_ROOT, "media"))
+MEDIA_ROOT = normpath(join(SITE_ROOT, "static", "media"))
 MEDIA_URL = '/media/'
 
 ROOT_URLCONF = '{}.urls'.format(SITE_NAME)
@@ -55,7 +55,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_extensions',
     'filer',
     'easy_thumbnails',
     'sekizai',
