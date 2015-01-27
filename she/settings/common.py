@@ -14,6 +14,7 @@ sys.path.append(BASE_DIR)
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+TEMPLATE_DIRS = ('/var/www/she/chemicals/templates/',)
 ALLOWED_HOSTS = ['.eu.nli.net', '.kronosww.com']
 ADMINS = (
     ('Lutz Moppert', 'lutz.moppert@kronosww.com'),
