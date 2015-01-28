@@ -42,8 +42,10 @@ and you can install it manually after the above installation has finished:
 
 ``pip install django-filer --no-deps``
 
-You have to create a database for the project named *she* and a user also named *she* that has füll rights on that database. The password should go into a new file called secret.py
-along with the Secret Key for this instance of the application::
+You have to create a database for the project named *she* and a user also
+named *she* that has full rights on that database. The password should go into
+a new file called secret.py along with the Secret Key for this instance of the
+application::
 
   DB_PASS = 'Secret_DB_Password'
   SECRET_KEY = 'Secret_Key_50_random_ASCII_Characters'
