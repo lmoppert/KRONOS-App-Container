@@ -28,7 +28,7 @@ DATABASES = {
     },
     'legacy': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'she_Substance_Portal',
+        'NAME': 'Substance_Portal',
         'USER': 'she',
         'PASSWORD': DB_PASS,
     }
