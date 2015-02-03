@@ -35,6 +35,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.RemoteUserBackend',
 )
 
-INSTALLED_APPS = ('debug_toolbar', 'django_extensions', ) + INSTALLED_APPS
+INSTALLED_APPS = ('debug_toolbar', ) + INSTALLED_APPS
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
 INTERNAL_IPS = ('127.0.0.1', '10.49.20.25', '10.49.20.40')

@@ -61,6 +61,7 @@ INSTALLED_APPS = (
     'sekizai',
     'chemicals',
     'django_tables2',
+    'django_extensions',
 )
 
 MIDDLEWARE_CLASSES = (
