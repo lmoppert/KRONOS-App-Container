@@ -6,3 +6,4 @@ django-suit
 MySQL-python
 docutils
 django-filer
+django-ldap-sync

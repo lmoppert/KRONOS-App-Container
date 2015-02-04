@@ -3,7 +3,7 @@
 from django.utils.translation import ugettext_lazy as _
 from django.conf import global_settings
 from os.path import abspath, basename, dirname, join, normpath
-from secrets import SECRET_KEY
+from secrets import SECRET_KEY, LDAP_USER_PW
 import sys
 
 BASE_DIR = dirname(dirname(abspath(__file__)))
@@ -62,6 +62,7 @@ INSTALLED_APPS = (
     'chemicals',
     'django_tables2',
     'django_extensions',
+    'ldap_sync',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,3 +91,23 @@ THUMBNAIL_PROCESSORS = (
 MIGRATION_MODULES = {
     'filer': 'filer.migrations_django',
 }
+
+# Settings for LDAP synchronisation
+LDAP_SYNC_URI = "ldap://lev-srv-112.eu.nli.net:389"
+LDAP_SYNC_BASE = "OU=EU,DC=EU,DC=NLI,DC=NET"
+LDAP_SYNC_BASE_USER = "CN=AD Query,OU=Applications,OU=Users,OU=LEV,OU=D," \
+    "OU=EU,DC=EU,DC=NLI,DC=NET"
+LDAP_SYNC_BASE_PASS = LDAP_USER_PW
+LDAP_SYNC_USER_FILTER = "(&(objectCategory=person)(objectClass=User)" \
+    "(memberOf=CN=LEV-GG-Chemicals,OU=Other,OU=Groups,OU=LEV,OU=D," \
+    "OU=EU,DC=EU,DC=NLI,DC=NET))"
+LDAP_SYNC_USER_ATTRIBUTES = {
+    "userPrincipalName": "username",
+    "givenName": "first_name",
+    "sn": "last_name",
+    "mail": "email",
+}
+LDAP_SYNC_GROUP_FILTER = "(&(objectclass=group)" \
+    "(memberOf=CN=LEV-GG-Chemicals,OU=Other,OU=Groups,OU=LEV,OU=D," \
+    "OU=EU,DC=EU,DC=NLI,DC=NET))"
+LDAP_SYNC_GROUP_ATTRIBUTES = {"cn": "name", }
