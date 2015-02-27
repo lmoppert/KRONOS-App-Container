@@ -4,8 +4,8 @@ from secrets import DB_PASS
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static"))
 STATIC_URL = 'https://lev-srv-590.eu.nli.net/'
@@ -33,3 +33,11 @@ DATABASES = {
         'PASSWORD': DB_PASS,
     }
 }
+
+MIDDLEWARE_CLASSES += (
+    'django.contrib.auth.middleware.RemoteUserMiddleware',
+)
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.RemoteUserBackend',
+)
