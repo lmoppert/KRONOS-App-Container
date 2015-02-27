@@ -41,3 +41,5 @@ MIDDLEWARE_CLASSES += (
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.RemoteUserBackend',
 )
+
+SUIT_CONFIG = {'ADMIN_NAME': 'Chemicals PROD'}
