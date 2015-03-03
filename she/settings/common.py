@@ -113,5 +113,10 @@ LDAP_SYNC_GROUP_FILTER = "(&(objectclass=group)" \
 LDAP_SYNC_GROUP_ATTRIBUTES = {"cn": "name", }
 
 SUIT_CONFIG = {
-    'SEARCH_URL': ''
+    'SEARCH_URL': '',
+    'MENU_ICONS': {
+        'auth': 'icon-user',
+        'chemicals': 'icon-tint',
+        'filer': 'icon-folder-open',
+    },
 }
