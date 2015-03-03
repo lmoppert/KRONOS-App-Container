@@ -42,4 +42,4 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.RemoteUserBackend',
 )
 
-SUIT_CONFIG = {'ADMIN_NAME': 'Chemicals PROD'}
+SUIT_CONFIG['ADMIN_NAME'] = 'Chemicals PROD'

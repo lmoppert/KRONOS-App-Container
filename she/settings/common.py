@@ -111,3 +111,7 @@ LDAP_SYNC_GROUP_FILTER = "(&(objectclass=group)" \
     "(memberOf=CN=LEV-GG-Chemicals,OU=Other,OU=Groups,OU=LEV,OU=D," \
     "OU=EU,DC=EU,DC=NLI,DC=NET))"
 LDAP_SYNC_GROUP_ATTRIBUTES = {"cn": "name", }
+
+SUIT_CONFIG = {
+    'SEARCH_URL': ''
+}
