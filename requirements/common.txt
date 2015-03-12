@@ -8,3 +8,4 @@ docutils
 django-filer
 django-ldap-sync
 django-extensions
+django-crispy-forms

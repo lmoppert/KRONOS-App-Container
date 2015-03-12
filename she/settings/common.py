@@ -1,6 +1,7 @@
 """Django settings for she project."""
 # -*- coding: utf-8 -*-
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.messages import constants as messages
 from django.conf import global_settings
 from os.path import abspath, basename, dirname, join, normpath
 from secrets import SECRET_KEY, LDAP_USER_PW
@@ -63,6 +64,7 @@ INSTALLED_APPS = (
     'django_tables2',
     'django_extensions',
     'ldap_sync',
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -120,3 +122,7 @@ SUIT_CONFIG = {
         'filer': 'icon-folder-open',
     },
 }
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+
+MESSAGE_TAGS = {messages.ERROR: 'danger'}
