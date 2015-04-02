@@ -2,3 +2,6 @@
 django-debug-toolbar
 pyinotify
 Werkzeug
+model_mommy
+coverage
+selenium

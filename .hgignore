@@ -4,6 +4,7 @@ syntax: glob
 .settings
 .project
 .buildpath
+.coverage
 *.pyc
 *.sw?
 *.mo
