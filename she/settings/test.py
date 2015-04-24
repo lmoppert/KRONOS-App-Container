@@ -1,5 +1,4 @@
 from common import *
-import sys
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
