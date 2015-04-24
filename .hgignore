@@ -13,5 +13,4 @@ syntax: glob
 logs/*.log
 she/settings/secrets.py
 she/apache.conf
-static/*
 media/*

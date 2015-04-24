@@ -15,7 +15,8 @@ sys.path.append(BASE_DIR)
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-TEMPLATE_DIRS = ('/var/www/she/chemicals/templates/',)
+TEMPLATE_DIRS = ('/var/www/she/templates/', '/var/www/she/psa/templates/',
+                 '/var/www/she/chemicals/templates/',)
 ALLOWED_HOSTS = ['.eu.nli.net', '.kronosww.com']
 ADMINS = (
     ('Lutz Moppert', 'lutz.moppert@kronosww.com'),
@@ -39,6 +40,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "static"))
+STATICFILES_DIRS = (STATIC_ROOT, )
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = normpath(join(SITE_ROOT, "media"))
