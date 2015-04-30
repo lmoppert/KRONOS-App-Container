@@ -63,10 +63,12 @@ INSTALLED_APPS = (
     'easy_thumbnails',
     'sekizai',
     'chemicals',
+    'psa',
     'django_tables2',
     'django_extensions',
     'ldap_sync',
     'crispy_forms',
+    'mptt',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -122,6 +124,7 @@ SUIT_CONFIG = {
         'auth': 'icon-user',
         'chemicals': 'icon-tint',
         'filer': 'icon-folder-open',
+        'psa': 'icon-headphones',
     },
 }
 CRISPY_TEMPLATE_PACK = 'bootstrap3'

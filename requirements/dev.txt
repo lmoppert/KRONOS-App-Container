@@ -5,3 +5,4 @@ Werkzeug
 model_mommy
 coverage
 selenium
+html2text

@@ -23,7 +23,13 @@ DATABASES = {
         'NAME': 'Substance_Portal',
         'USER': 'she',
         'PASSWORD': DB_PASS,
-    }
+    },
+    'legacy_psa': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DotNetNuke',
+        'USER': 'she',
+        'PASSWORD': DB_PASS,
+    },
 }
 
 MIDDLEWARE_CLASSES += (
