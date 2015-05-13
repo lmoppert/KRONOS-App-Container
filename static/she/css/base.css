@@ -17,6 +17,7 @@ img.flag {margin:0 3px 2px 0;}
 .with-linebreaks {white-space:pre-wrap;}
 .scrollable-menu {height:auto; max-height:400px; overflow-x:hidden;}
 .badge-active {background-color:#41940e;}
+.panel-body {color:#777;}
 
 
 /*******************************
