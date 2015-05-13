@@ -19,6 +19,7 @@
     {% render_block "css" %}
 </head>
 <body>
+    {% block navbar %}
     <nav id="header" class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -58,11 +59,13 @@
             </div>
         </div>
     </nav>
+    {% endblock %}
     <div id="main">
         <div class="container">
             {% block base_content %}{% endblock %}
         </div>
     </div>
+    {% block footer %}
     <div id="footer">
         <div class="container">
             <div class="col-lg-1" id="footerlogo">
@@ -78,6 +81,7 @@
             </div>
         </div>
     </div>
+    {% endblock %}
     <script type="text/javascript" src="{% static "she/js/jquery.min.js" %}"></script>
     <script type="text/javascript" src="{% static "she/js/bootstrap.min.js" %}"></script>
     <script type="text/javascript" src="{% static "she/js/respond.min.js" %}"></script>
