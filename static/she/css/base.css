@@ -18,6 +18,9 @@ img.flag {margin:0 3px 2px 0;}
 .scrollable-menu {height:auto; max-height:400px; overflow-x:hidden;}
 .badge-active {background-color:#41940e;}
 .panel-body {color:#777;}
+.text-hint {color: #d9534f; margin:5px 0;}
+.text-hint strong {display:block; padding-bottom:5px;}
+.add_item_form {margin-top:10px;}
 
 
 /*******************************
