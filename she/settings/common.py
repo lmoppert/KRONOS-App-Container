@@ -44,7 +44,7 @@ USE_TZ = True
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "static"))
 STATICFILES_DIRS = (
-    STATIC_ROOT,
+    normpath(join(SITE_ROOT, "static")),
     normpath(join(SITE_ROOT, "chemicals", "static")),
 )
 STATIC_URL = '/static/'
