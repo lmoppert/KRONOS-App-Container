@@ -136,5 +136,6 @@ SUIT_CONFIG = {
 }
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-
 MESSAGE_TAGS = {messages.ERROR: 'danger'}
+
+FILEBROWSER_LIST_PER_PAGE = 10000
