@@ -33,7 +33,6 @@ DATABASES = {
 }
 
 MIDDLEWARE_CLASSES += (
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.auth.middleware.RemoteUserMiddleware',
 )
 
@@ -42,7 +41,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 INSTALLED_APPS = ('debug_toolbar', ) + INSTALLED_APPS
-DEBUG_TOOLBAR_PATCH_SETTINGS = False
 INTERNAL_IPS = ('127.0.0.1', '10.49.20.25', '10.49.20.40')
 
 SUIT_CONFIG['ADMIN_NAME'] = 'Chemicals STAGE'
