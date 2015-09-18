@@ -5,9 +5,9 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static"))
-STATIC_URL = 'https://lev-srv-577.eu.nli.net/'
+STATIC_URL = 'https://static-dev.kronosww.com/'
 MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
-MEDIA_URL = 'https://lev-srv-577.eu.nli.net/media/'
+MEDIA_URL = 'https://static-dev.kronosww.com/media/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
