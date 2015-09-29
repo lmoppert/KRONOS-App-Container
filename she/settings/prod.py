@@ -1,5 +1,5 @@
 from common import *
-from secrets import DB_PASS
+from secrets import PSQL_PASS
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -21,17 +21,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'localhost',
         'NAME': 'she',
         'USER': 'she',
-        'PASSWORD': DB_PASS,
+        'PASSWORD': PSQL_PASS,
     },
-    'legacy': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Substance_Portal',
-        'USER': 'she',
-        'PASSWORD': DB_PASS,
-    }
 }
 
 MIDDLEWARE_CLASSES += (
