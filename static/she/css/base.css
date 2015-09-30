@@ -48,6 +48,7 @@ html body #header {height:51px;}
 /*******************************
  * Conent
  *******************************/
+#content h1 small a {color: #999}
 #content {margin-bottom:50px; min-height:500px; font-size:14px !important;}
 #content div.filter-panel {margin:5px 5px 15px 5px;}
 #content object {padding:0; margin:0 10px 10px 0;}
