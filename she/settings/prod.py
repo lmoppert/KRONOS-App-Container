@@ -17,7 +17,9 @@ ALLOWED_HOSTS = [
     '.kronosww.com', '.kronosww.com.',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'lev-srv-110.eu.nli.net'
+SERVER_EMAIL = 'chemicals@kronosww.com'
 
 DATABASES = {
     'default': {
