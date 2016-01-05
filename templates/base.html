@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "she/css/bootstrap.min.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "she/css/base.css" %}">
     {% block extra_head %}{% endblock %}
-    {% render_block "css" %}
+    <style>{% render_block "css" %}</style>
 </head>
 <body>
     {% block navbar %}
