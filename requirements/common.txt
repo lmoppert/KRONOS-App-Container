@@ -1,4 +1,4 @@
-Django
+Django <1.9
 django-modeltranslation
 django-sekizai
 django-tables2
@@ -13,3 +13,8 @@ django-crispy-forms
 django-markdown-deux
 django-mptt
 reportlab
+
+# OpenSSL
+pyopenssl
+ndg-httpsclient
+pyasn1
