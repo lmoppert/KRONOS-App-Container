@@ -110,3 +110,11 @@ html body #header {height:51px;}
 #footer ul li:first-child a {padding:0 5px 0 0;}
 #footer ul li:last-child a {padding:0 0 0 5px;}
 #footer table tr, #footer table td {padding:0; margin:0;line-height:1.2;}
+
+
+/*******************************
+ * PRINT
+ *******************************/
+@media print {
+    a[href]:after {content: none;}
+}
