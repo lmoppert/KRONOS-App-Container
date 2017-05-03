@@ -106,14 +106,14 @@ MIGRATION_MODULES = {
 }
 
 # Settings for LDAP synchronisation
-LDAP_SYNC_URI = "ldap://lev-srv-112.eu.nli.net:389"
-LDAP_SYNC_BASE = "OU=EU,DC=EU,DC=NLI,DC=NET"
-LDAP_SYNC_BASE_USER = "CN=AD Query,OU=Applications,OU=Users,OU=LEV,OU=D," \
-    "OU=EU,DC=EU,DC=NLI,DC=NET"
+LDAP_SYNC_URI = "ldap://kro-lev-srv-600.kronosww.com:389"
+LDAP_SYNC_BASE = "OU=EU,DC=Kronosww,DC=com"
+LDAP_SYNC_BASE_USER = "CN=AD Query,OU=Service Accounts,OU=LEV,OU=DE," \
+    "OU=EU,DC=Kronosww,DC=com"
 LDAP_SYNC_BASE_PASS = LDAP_USER_PW
 LDAP_SYNC_USER_FILTER = "(&(objectCategory=person)(objectClass=User)" \
-    "(memberOf=CN=LEV-GG-Chemicals,OU=Other,OU=Groups,OU=LEV,OU=D," \
-    "OU=EU,DC=EU,DC=NLI,DC=NET))"
+    "(memberOf=CN=LEV-GG-Chemicals,OU=Global,OU=Groups,OU=LEV,OU=DE," \
+    "OU=EU,DC=Kronosww,DC=com))"
 LDAP_SYNC_USER_ATTRIBUTES = {
     "userPrincipalName": "username",
     "givenName": "first_name",
@@ -121,8 +121,8 @@ LDAP_SYNC_USER_ATTRIBUTES = {
     "mail": "email",
 }
 LDAP_SYNC_GROUP_FILTER = "(&(objectclass=group)" \
-    "(memberOf=CN=LEV-GG-Chemicals,OU=Other,OU=Groups,OU=LEV,OU=D," \
-    "OU=EU,DC=EU,DC=NLI,DC=NET))"
+    "(memberOf=CN=LEV-GG-Chemicals,OU=Global,OU=Groups,OU=LEV,OU=DE," \
+    "OU=EU,DC=Kronosww,DC=com))"
 LDAP_SYNC_GROUP_ATTRIBUTES = {"cn": "name", }
 
 SUIT_CONFIG = {
