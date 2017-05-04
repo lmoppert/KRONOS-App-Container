@@ -3,7 +3,6 @@ django-modeltranslation
 django-sekizai
 django-tables2
 django-suit
-MySQL-python
 psycopg2
 docutils
 django-filer
@@ -13,8 +12,3 @@ django-crispy-forms
 django-markdown-deux
 django-mptt
 reportlab
-
-# OpenSSL
-#pyopenssl
-#ndg-httpsclient
-#pyasn1
