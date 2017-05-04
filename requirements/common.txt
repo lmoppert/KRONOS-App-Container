@@ -15,6 +15,6 @@ django-mptt
 reportlab
 
 # OpenSSL
-pyopenssl
-ndg-httpsclient
-pyasn1
+#pyopenssl
+#ndg-httpsclient
+#pyasn1
