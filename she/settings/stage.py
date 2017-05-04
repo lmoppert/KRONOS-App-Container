@@ -19,12 +19,6 @@ DATABASES = {
         'USER': 'she',
         'PASSWORD': PSQL_PASS,
     },
-    'legacy': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Substance_Portal',
-        'USER': 'she',
-        'PASSWORD': DB_PASS,
-    },
     'legacy_psa': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'DotNetNuke',
