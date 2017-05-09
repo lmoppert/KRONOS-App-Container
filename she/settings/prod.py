@@ -31,12 +31,12 @@ DATABASES = {
     },
 }
 
-MIDDLEWARE_CLASSES += (
+MIDDLEWARE += [
     'django.contrib.auth.middleware.RemoteUserMiddleware',
-)
+]
 
-AUTHENTICATION_BACKENDS = (
+AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.RemoteUserBackend',
-)
+]
 
 SUIT_CONFIG['ADMIN_NAME'] = 'Chemicals PROD'

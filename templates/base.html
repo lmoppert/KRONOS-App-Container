@@ -1,5 +1,5 @@
-{% load sekizai_tags i18n chemical_tags %}
-{% load static from staticfiles %}
+{% load i18n chemical_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="{% static "she/css/bootstrap.min.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "she/css/base.css" %}">
     {% block extra_head %}{% endblock %}
-    <style>{% render_block "css" %}</style>
 </head>
 <body>
     {% block navbar %}
@@ -85,7 +84,7 @@
     <script type="text/javascript" src="{% static "she/js/jquery.min.js" %}"></script>
     <script type="text/javascript" src="{% static "she/js/bootstrap.min.js" %}"></script>
     <script type="text/javascript" src="{% static "she/js/respond.min.js" %}"></script>
-    {% render_block "js" %}
+    {% block extra_js %}{% endblock %}
 </body>
 </html>
 <!-- vim:syntax=htmldjango
