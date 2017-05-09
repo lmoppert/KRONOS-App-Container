@@ -1,5 +1,5 @@
 from common import *
-from secrets import PSQL_PASS, DB_PASS
+from secrets import PSQL_PASS
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -19,23 +19,17 @@ DATABASES = {
         'USER': 'she',
         'PASSWORD': PSQL_PASS,
     },
-    'legacy_psa': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'DotNetNuke',
-        'USER': 'she',
-        'PASSWORD': DB_PASS,
-    },
 }
 
-MIDDLEWARE_CLASSES += (
+MIDDLEWARE += [
     'django.contrib.auth.middleware.RemoteUserMiddleware',
-)
+]
 
-AUTHENTICATION_BACKENDS = (
+AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.RemoteUserBackend',
-)
+]
 
-INSTALLED_APPS += ('debug_toolbar', )
-INTERNAL_IPS = ('127.0.0.1', '10.49.20.25', '10.49.20.40')
+INSTALLED_APPS += ['debug_toolbar', ]
+INTERNAL_IPS = ['127.0.0.1', '10.49.20.25', '10.49.20.40']
 
 SUIT_CONFIG['ADMIN_NAME'] = 'Chemicals DEV'

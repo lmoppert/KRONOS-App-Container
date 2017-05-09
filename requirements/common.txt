@@ -1,6 +1,5 @@
-Django <1.9
+Django <2
 django-modeltranslation
-django-sekizai
 django-tables2
 django-suit
 psycopg2
