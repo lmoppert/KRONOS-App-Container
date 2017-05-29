@@ -83,13 +83,13 @@ INSTALLED_APPS = [
     'markdown_deux',
     'easy_thumbnails',
     'filer',
+    'mptt',
     'chemicals',
     'psa',
     'django_tables2',
     'django_extensions',
     'ldap_sync',
     'crispy_forms',
-    'mptt',
 ]
 
 MIDDLEWARE = [
