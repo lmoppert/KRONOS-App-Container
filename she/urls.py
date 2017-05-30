@@ -19,7 +19,9 @@ urlpatterns = [
 
 if settings.DEBUG:
     import debug_toolbar
-    urlpatterns += [
+    urlpatterns = [
         url(r'^__debug__/', include(debug_toolbar.urls)),
         url(r'', include('django.contrib.staticfiles.urls')),
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ] + urlpatterns + static(settings.MEDIA_URL,
+                             document_root=settings.MEDIA_ROOT)
+

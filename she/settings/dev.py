@@ -24,6 +24,7 @@ DATABASES = {
 }
 
 MIDDLEWARE += [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.auth.middleware.RemoteUserMiddleware',
 ]
 
