@@ -8,9 +8,9 @@ TEMPLATE_DEBUG = DEBUG
 # SESSION_COOKIE_SECURE = True
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static"))
-STATIC_URL = 'https://lev-srv-590.eu.nli.net/'
+STATIC_URL = 'https://chemicals.eu.nli.net:8443/'
 MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
-MEDIA_URL = 'https://lev-srv-590.eu.nli.net/media/'
+MEDIA_URL = 'https://chemicals.eu.nli.net:8443/media/'
 
 ALLOWED_HOSTS = [
     '.eu.nli.net', '.eu.nli.net.',
