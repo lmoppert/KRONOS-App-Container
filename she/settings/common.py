@@ -20,7 +20,7 @@ TEMPLATE_DIRS = (
     normpath(join(SITE_ROOT, "psa", "templates")),
     normpath(join(SITE_ROOT, "chemicals", "templates")),
 )
-ALLOWED_HOSTS = ['.eu.nli.net', '.kronosww.com']
+ALLOWED_HOSTS = ['.kronosww.com']
 ADMINS = (
     ('Lutz Moppert', 'lutz.moppert@kronosww.com'),
 )

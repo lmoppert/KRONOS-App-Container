@@ -8,17 +8,16 @@ TEMPLATE_DEBUG = DEBUG
 # SESSION_COOKIE_SECURE = True
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static"))
-STATIC_URL = 'https://chemicals.eu.nli.net:8443/'
+STATIC_URL = 'https://chemicals.kronosww.com:8443/'
 MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
-MEDIA_URL = 'https://chemicals.eu.nli.net:8443/media/'
+MEDIA_URL = 'https://chemicals.kronosww.com:8443/media/'
 
 ALLOWED_HOSTS = [
-    '.eu.nli.net', '.eu.nli.net.',
     '.kronosww.com', '.kronosww.com.',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'lev-srv-110.eu.nli.net'
+EMAIL_HOST = 'levp1.kronosww.com'
 SERVER_EMAIL = 'chemicals@kronosww.com'
 
 DATABASES = {
