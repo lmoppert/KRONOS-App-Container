@@ -1,13 +1,17 @@
 from common import *
-from secrets import PSQL_PASS, DB_PASS
+from secrets import PSQL_PASS
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static"))
-STATIC_URL = 'https://static-dev.kronosww.com/'
+STATIC_URL = 'https://chemicals-dev.kronosww.com:8443/'
 MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
-MEDIA_URL = 'https://static-dev.kronosww.com/media/'
+MEDIA_URL = 'https://chemicals-dev.kronosww.com:8443/media/'
+
+ALLOWED_HOSTS = [
+    '.kronosww.com', '.kronosww.com.',
+]
 
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
@@ -15,25 +19,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'localhost',
-        'NAME': 'she',
+        'NAME': 'dev_she',
         'USER': 'she',
         'PASSWORD': PSQL_PASS,
-    },
-    'legacy': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Substance_Portal',
-        'USER': 'she',
-        'PASSWORD': DB_PASS,
-    },
-    'legacy_psa': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'DotNetNuke',
-        'USER': 'she',
-        'PASSWORD': DB_PASS,
     },
 }
 
 MIDDLEWARE_CLASSES += (
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.auth.middleware.RemoteUserMiddleware',
 )
 
@@ -42,6 +35,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 INSTALLED_APPS += ('debug_toolbar', )
-INTERNAL_IPS = ('127.0.0.1', '10.49.20.25', '10.49.20.40')
+INTERNAL_IPS = ('127.0.0.1', '10.49.20.50', '10.49.20.40')
 
 SUIT_CONFIG['ADMIN_NAME'] = 'Chemicals DEV'

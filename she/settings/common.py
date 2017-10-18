@@ -69,6 +69,7 @@ INSTALLED_APPS = (
     'markdown_deux',
     'easy_thumbnails',
     'filer',
+    'mptt',
     'sekizai',
     'chemicals',
     'psa',
@@ -76,7 +77,6 @@ INSTALLED_APPS = (
     'django_extensions',
     'ldap_sync',
     'crispy_forms',
-    'mptt',
 )
 
 MIDDLEWARE_CLASSES = (
