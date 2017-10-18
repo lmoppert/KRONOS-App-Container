@@ -17,22 +17,22 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'localhost',
-        'NAME': 'she',
+        'NAME': 'dev_she',
         'USER': 'she',
         'PASSWORD': PSQL_PASS,
     },
 }
 
-MIDDLEWARE += [
+MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.auth.middleware.RemoteUserMiddleware',
-]
+)
 
-AUTHENTICATION_BACKENDS = [
+AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.RemoteUserBackend',
-]
+)
 
-INSTALLED_APPS += ['debug_toolbar', ]
-INTERNAL_IPS = ['127.0.0.1', '10.49.20.50', '10.49.20.40']
+INSTALLED_APPS += ('debug_toolbar', )
+INTERNAL_IPS = ('127.0.0.1', '10.49.20.50', '10.49.20.40')
 
 SUIT_CONFIG['ADMIN_NAME'] = 'Chemicals DEV'

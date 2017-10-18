@@ -1,5 +1,5 @@
-{% load i18n chemical_tags %}
-{% load static %}
+{% load sekizai_tags i18n chemical_tags %}
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -16,11 +16,12 @@
     <link rel="stylesheet" type="text/css" href="{% static "she/css/bootstrap.min.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "she/css/base.css" %}">
     {% block extra_head %}{% endblock %}
+    <style>{% render_block "css" %}</style>
 </head>
 <body>
     {% block navbar %}
     <nav id="header" class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
+        <div class="container"><div class="row">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -29,7 +30,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="{% static "she/img/kronoslogo.png" %}" height="80%">
+                    <img height="80%" src="{% static "she/img/kronoslogo.png" %}">
                 </a>
                 {% block app_name %}{% endblock %}
             </div>
@@ -56,7 +57,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div></div>
     </nav>
     {% endblock %}
     <div id="main">
@@ -84,7 +85,7 @@
     <script type="text/javascript" src="{% static "she/js/jquery.min.js" %}"></script>
     <script type="text/javascript" src="{% static "she/js/bootstrap.min.js" %}"></script>
     <script type="text/javascript" src="{% static "she/js/respond.min.js" %}"></script>
-    {% block extra_js %}{% endblock %}
+    {% render_block "js" %}
 </body>
 </html>
 <!-- vim:syntax=htmldjango

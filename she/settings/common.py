@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.messages import constants as messages
+from django.conf import global_settings
 from os.path import abspath, basename, dirname, join, normpath
 from secrets import SECRET_KEY, LDAP_USER_PW
 import sys
@@ -12,33 +13,17 @@ SITE_ROOT = dirname(BASE_DIR)
 sys.path.append(BASE_DIR)
 
 DEBUG = False
+TEMPLATE_DEBUG = DEBUG
 
-TEMPLATES = [{
-    'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [
-        normpath(join(SITE_ROOT, "templates")),
-        normpath(join(SITE_ROOT, "psa", "templates")),
-        normpath(join(SITE_ROOT, "chemicals", "templates")),
-    ],
-    'APP_DIRS': True,
-    'OPTIONS': {
-        'context_processors': [
-            'django.contrib.auth.context_processors.auth',
-            'django.template.context_processors.debug',
-            'django.template.context_processors.i18n',
-            'django.template.context_processors.media',
-            'django.template.context_processors.static',
-            'django.template.context_processors.tz',
-            'django.contrib.messages.context_processors.messages',
-            'django.template.context_processors.request',
-        ],
-    },
-}, ]
-
+TEMPLATE_DIRS = (
+    normpath(join(SITE_ROOT, "templates")),
+    normpath(join(SITE_ROOT, "psa", "templates")),
+    normpath(join(SITE_ROOT, "chemicals", "templates")),
+)
 ALLOWED_HOSTS = ['.eu.nli.net', '.kronosww.com']
-ADMINS = [
+ADMINS = (
     ('Lutz Moppert', 'lutz.moppert@kronosww.com'),
-]
+)
 MANAGERS = ADMINS
 
 TIME_ZONE = 'Europe/Berlin'
@@ -58,10 +43,10 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "static"))
-STATICFILES_DIRS = [
+STATICFILES_DIRS = (
     normpath(join(SITE_ROOT, "static")),
     normpath(join(SITE_ROOT, "chemicals", "static")),
-]
+)
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = normpath(join(SITE_ROOT, "media"))
@@ -70,7 +55,7 @@ MEDIA_URL = '/media/'
 ROOT_URLCONF = '{}.urls'.format(SITE_NAME)
 WSGI_APPLICATION = '{}.wsgi.application'.format(SITE_NAME)
 
-INSTALLED_APPS = [
+INSTALLED_APPS = (
     'suit',
     'modeltranslation',
     'django.contrib.admin',
@@ -84,15 +69,16 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'filer',
     'mptt',
+    'sekizai',
     'chemicals',
     'psa',
     'django_tables2',
     'django_extensions',
     'ldap_sync',
     'crispy_forms',
-]
+)
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -100,29 +86,34 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+)
 
-THUMBNAIL_PROCESSORS = [
+TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
+    'django.core.context_processors.request',
+    'sekizai.context_processors.sekizai',
+)
+
+THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
     'easy_thumbnails.processors.autocrop',
     # 'easy_thumbnails.processors.scale_and_crop',
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters',
-]
+)
 
-# MIGRATION_MODULES = {
-#     'filer': 'filer.migrations_django',
-# }
+MIGRATION_MODULES = {
+    'filer': 'filer.migrations_django',
+}
 
 # Settings for LDAP synchronisation
 LDAP_SYNC_URI = "ldap://kro-lev-srv-600.kronosww.com:389"
-LDAP_SYNC_BASE = "OU=EU,DC=Kronosww,DC=com"
+LDAP_SYNC_BASE = "OU=EU,DC=KRONOSWW,DC=COM"
 LDAP_SYNC_BASE_USER = "CN=AD Query,OU=Service Accounts,OU=LEV,OU=DE," \
-    "OU=EU,DC=Kronosww,DC=com"
+    "OU=EU,DC=KRONOSWW,DC=COM"
 LDAP_SYNC_BASE_PASS = LDAP_USER_PW
 LDAP_SYNC_USER_FILTER = "(&(objectCategory=person)(objectClass=User)" \
     "(memberOf=CN=LEV-GG-Chemicals,OU=Global,OU=Groups,OU=LEV,OU=DE," \
-    "OU=EU,DC=Kronosww,DC=com))"
+    "OU=EU,DC=KRONOSWW,DC=COM))"
 LDAP_SYNC_USER_ATTRIBUTES = {
     "userPrincipalName": "username",
     "givenName": "first_name",
@@ -131,7 +122,7 @@ LDAP_SYNC_USER_ATTRIBUTES = {
 }
 LDAP_SYNC_GROUP_FILTER = "(&(objectclass=group)" \
     "(memberOf=CN=LEV-GG-Chemicals,OU=Global,OU=Groups,OU=LEV,OU=DE," \
-    "OU=EU,DC=Kronosww,DC=com))"
+    "OU=EU,DC=KRONOSWW,DC=COM))"
 LDAP_SYNC_GROUP_ATTRIBUTES = {"cn": "name", }
 
 SUIT_CONFIG = {
