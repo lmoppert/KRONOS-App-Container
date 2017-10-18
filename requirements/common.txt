@@ -1,13 +1,32 @@
-Django <2
-django-modeltranslation
-django-tables2
-django-suit
-psycopg2
-docutils
-django-filer
-django-ldap-sync
-django-extensions
-django-crispy-forms
-django-markdown-deux
-django-mptt
-reportlab
+Django <1.9
+django-modeltranslation==0.10
+django-sekizai==0.8.2
+django-tables2==1.0.4
+django-suit==0.2.16
+MySQL-python
+psycopg2==2.6.1
+docutils==0.12
+django-filer==1.0.6
+django-ldap-sync==0.1.1
+django-extensions==1.5.5
+django-crispy-forms==1.4.0
+django-markdown-deux==1.0.5
+django-mptt==0.8.0
+reportlab==3.2.0
+sqlparse<0.2
+
+# -- OpenSSL fix for old Ubuntu systems
+# pyopenssl
+# ndg-httpsclient
+# pyasn1
+
+# -- FREEZE other packages
+# django-polymorphic==0.8.1
+# easy-thumbnails==2.3
+# markdown2==2.3.4
+# olefile==0.44
+# Pillow==4.2.1
+# python-ldap==2.4.44
+# six==1.11.0
+# Unidecode==0.4.21
+# sqlparse==0.2.3

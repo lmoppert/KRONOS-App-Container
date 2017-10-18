@@ -13,12 +13,11 @@ MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
 MEDIA_URL = 'https://chemicals.kronosww.com:8443/media/'
 
 ALLOWED_HOSTS = [
-    '.eu.nli.net', '.eu.nli.net.',
     '.kronosww.com', '.kronosww.com.',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'lev-srv-110.eu.nli.net'
+EMAIL_HOST = 'levp1.kronosww.com'
 SERVER_EMAIL = 'chemicals@kronosww.com'
 
 DATABASES = {
