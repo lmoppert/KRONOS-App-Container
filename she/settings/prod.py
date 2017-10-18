@@ -12,9 +12,7 @@ STATIC_URL = 'https://chemicals.kronosww.com:8443/'
 MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
 MEDIA_URL = 'https://chemicals.kronosww.com:8443/media/'
 
-ALLOWED_HOSTS = [
-    '.kronosww.com', '.kronosww.com.',
-]
+ALLOWED_HOSTS = ['.kronosww.com', ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'levp1.kronosww.com'
@@ -30,9 +28,9 @@ DATABASES = {
     },
 }
 
-MIDDLEWARE += [
+MIDDLEWARE_CLASSES += (
     'django.contrib.auth.middleware.RemoteUserMiddleware',
-]
+)
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.RemoteUserBackend',
