@@ -6,8 +6,8 @@ from secrets import PSQL_PASS
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static", "she-dev"))
-STATIC_URL = 'https://chemicals-dev.kronosww.com:8443/she-dev/'
+STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static", "dev-she"))
+STATIC_URL = 'https://chemicals-dev.kronosww.com:8443/dev-she/'
 MEDIA_ROOT = normpath(join(SITE_ROOT, "..", "static", "media"))
 MEDIA_URL = 'https://chemicals-dev.kronosww.com:8443/media/'
 
