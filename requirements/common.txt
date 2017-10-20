@@ -1,6 +1,6 @@
-Django <1.9
+Django<1.9
+django-sekizai<0.9
 django-modeltranslation==0.10
-django-sekizai==0.8.2
 django-tables2==1.0.4
 django-suit==0.2.16
 MySQL-python
@@ -14,11 +14,6 @@ django-markdown-deux==1.0.5
 django-mptt==0.8.0
 reportlab==3.2.0
 sqlparse<0.2
-
-# -- OpenSSL fix for old Ubuntu systems
-# pyopenssl
-# ndg-httpsclient
-# pyasn1
 
 # -- FREEZE other packages
 # django-polymorphic==0.8.1
