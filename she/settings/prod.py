@@ -2,7 +2,6 @@ from common import *
 from secrets import PSQL_PASS
 
 DEBUG = False
-TEMPLATE_DEBUG = DEBUG
 
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True

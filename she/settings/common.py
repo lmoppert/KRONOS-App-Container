@@ -13,13 +13,23 @@ SITE_ROOT = dirname(BASE_DIR)
 sys.path.append(BASE_DIR)
 
 DEBUG = False
-TEMPLATE_DEBUG = DEBUG
 
-TEMPLATE_DIRS = (
-    normpath(join(SITE_ROOT, "templates")),
-    normpath(join(SITE_ROOT, "psa", "templates")),
-    normpath(join(SITE_ROOT, "chemicals", "templates")),
-)
+TEMPLATES = [{
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [normpath(join(SITE_ROOT, "templates")), ],
+    'APP_DIRS': True,
+    'OPTIONS': {
+        'debug': DEBUG,
+        'context_processors': [
+            'django.template.context_processors.debug',
+            'django.template.context_processors.request',
+            'django.contrib.auth.context_processors.auth',
+            'django.contrib.messages.context_processors.messages',
+            'sekizai.context_processors.sekizai',
+        ],
+    },
+}, ]
+
 ALLOWED_HOSTS = ['.eu.nli.net', '.kronosww.com']
 ADMINS = (
     ('Lutz Moppert', 'lutz.moppert@kronosww.com'),
@@ -86,11 +96,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
-
-TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
-    'django.core.context_processors.request',
-    'sekizai.context_processors.sekizai',
 )
 
 THUMBNAIL_PROCESSORS = (

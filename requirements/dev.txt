@@ -1,8 +1,8 @@
 -r common.txt
-django-debug-toolbar
-pyinotify
-Werkzeug
-model_mommy
-coverage
-selenium
-html2text
+django-debug-toolbar==1.4
+pyinotify==0.9.6
+Werkzeug==0.12.2
+model-mommy==1.2.6
+coverage==4.0.3
+selenium==2.48.0
+html2text==2015.11.4

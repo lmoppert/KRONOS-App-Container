@@ -4,7 +4,7 @@ from common import *
 from secrets import PSQL_PASS
 
 DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
 STATIC_ROOT = normpath(join(SITE_ROOT, "..", "static", "dev-she"))
 STATIC_URL = 'https://chemicals-dev.kronosww.com:8443/dev-she/'
