@@ -11,6 +11,8 @@ syntax: glob
 *~
 ~$*
 logs/*.log
+logs/*.log.gz
 she/settings/secrets.py
 she/apache.conf
 media/*
+.idea/*
