@@ -1,2 +1,2 @@
-chemicals = https://bitbucket.org/LEV_AppDev/chemicals
-psa = https://bitbucket.org/LEV_AppDev/psa
+chemicals = ssh://hg@bitbucket.org/LEV_AppDev/chemicals
+psa = ssh://hg@bitbucket.org/LEV_AppDev/psa
